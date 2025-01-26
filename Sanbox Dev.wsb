@@ -1,0 +1,27 @@
+<Configuration>
+
+<!-- Config général hardware -->
+
+	<ProtectedClient>Enable</ProtectedClient>
+	<MemoryInMB>8192</MemoryInMB>
+	<vGPU>enable</vGPU>
+	<DisableInProcNetworking>true</DisableInProcNetworking>
+	<AllowElevation>true</AllowElevation>
+
+<!-- Mapping des shared folders -->
+
+	<MappedFolders>
+		<MappedFolder>
+			<HostFolder>D:\Sandbox\Apps</HostFolder>
+			<SandboxFolder>C:\Apps</SandboxFolder>
+			<ReadOnly>false</ReadOnly>
+		</MappedFolder>
+	</MappedFolders>
+
+<!-- Lancement du script -->
+
+	<LogonCommand>
+		<Command>C:\Apps\installer.bat Y</Command>
+	</LogonCommand>
+
+</Configuration>
